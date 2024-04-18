@@ -1,6 +1,8 @@
 import classes from './Auth.module.css';
 
-const Auth = () => {
+const Auth = (
+  {onSelect}
+) => {
   return (
     <main className={classes.auth}>
       <section>
@@ -13,7 +15,7 @@ const Auth = () => {
             <label htmlFor='password'>Password</label>
             <input type='password' id='password' />
           </div>
-          <button>Login</button>
+          <button onClick={onSelect} type='button' >Login</button>
         </form>
       </section>
     </main>
